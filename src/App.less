@@ -1,5 +1,33 @@
+@header-height: 50px;
+
 .app {
-  width: 100vw;
-  height: 100vh;
-  background: rgb(25, 165, 123);
+    width: 100vw;
+    height: 100vh;
+    font-weight: 200;
+    &-header {
+        height: @header-height;
+        text-align: center;
+        line-height: @header-height;
+    }
+    &-content {
+        position: fixed;
+        top: @header-height;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #eceff1;
+
+        &-item {
+            display: inline-block;
+            margin: 20px;
+            padding: 10vh 10vw;
+            border-radius: 20px;
+            background: white;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                box-shadow: 0 0 20px #ccc;
+            }
+        }
+    }
 }
