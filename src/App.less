@@ -1,4 +1,5 @@
 @header-height: 50px;
+@border: 10px;
 
 .app {
     width: 100vw;
@@ -19,13 +20,22 @@
         &-item {
             display: inline-block;
             margin: 20px;
-            padding: 10vh 10vw;
-            border-radius: 20px;
+            width: 30vw;
+            border-radius: @border;
             background: white;
             transition: all 0.5s ease-in-out;
             cursor: pointer;
             &:hover {
                 box-shadow: 0 0 20px #ccc;
+            }
+
+            &-img {
+                width: 100%;
+                border-radius: @border @border 0 0;
+            }
+            &-footer {
+                padding: 10px 20px;
+                text-align: center;
             }
         }
     }

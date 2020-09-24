@@ -8,7 +8,20 @@ function App() {
             <div className="app-header">XLab实验室项目展示</div>
             <div className="app-content">
                 {APP_CONFIG.map((app) => {
-                    return <div className="app-content-item">{app.name}</div>
+                    return (
+                        <a href={app.url}>
+                            <div className="app-content-item">
+                                <img
+                                    className="app-content-item-img"
+                                    src={app.image}
+                                    alt="image"
+                                />
+                                <div className="app-content-item-footer">
+                                    {app.name}
+                                </div>
+                            </div>
+                        </a>
+                    )
                 })}
             </div>
         </div>
