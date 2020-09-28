@@ -3,7 +3,7 @@ import { APP_CONFIG } from "./config"
 import "./App.less"
 
 function App() {
-    const [showPanel, setShowPanel] = useState(true)
+    const [showPanel, setShowPanel] = useState(false)
     const [url, setUrl] = useState("")
     const [head, setHead] = useState("default head")
     const handleClick = (url, head) => {
