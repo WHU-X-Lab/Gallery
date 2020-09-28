@@ -17,12 +17,20 @@
     height: 100vh;
     &-head {
         .center-y;
+        justify-content: space-between;
         height: @header-height;
         text-align: center;
         line-height: @header-height;
         background: #000;
         color: #fff;
         padding: 0 20px;
+        &-text {
+            .center-y;
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
         &-icon {
             .center-y;
             float: right;
@@ -32,6 +40,7 @@
             svg {
                 width: 1.5rem;
                 height: 1.5rem;
+                margin: 2px;
             }
         }
     }
@@ -59,16 +68,19 @@
             padding: 10px 0;
             border-bottom: 1px solid #eceff1;
             text-align: center;
-            span {
-                position: absolute;
-                right: 20px;
-                float: right;
+            &-icon {
                 font-weight: bold;
                 color: #ccc;
                 cursor: pointer;
-                transition: all 0.3s ease-in-out;
-                &:hover {
-                    color: #000;
+                svg {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin: 0 0.5rem;
+                }
+                &-group {
+                    display: flex;
+                    float: right;
+                    margin-right: 10px;
                 }
             }
         }

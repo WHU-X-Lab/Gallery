@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react"
 import { APP_CONFIG } from "./config"
-import { svgGithub } from "./icons"
+import { svgGithub, svgDoc, svgLab, svgClose, svgLink } from "./icons"
 import "./App.less"
 
 function App() {
@@ -15,14 +15,23 @@ function App() {
     return (
         <div className="app">
             <div className="app-head">
-                XLab实验室项目展示
-                <a
-                    className="app-head-icon"
-                    href="https://github.com/WHU-X-Lab"
-                    target="_blank"
-                >
-                    {svgGithub}Github
-                </a>
+                <div className="app-head-text">{svgLab}XLab实验室项目展示</div>
+                <div className="app-head-icon-group">
+                    <a
+                        className="app-head-icon"
+                        href="https://github.com/WHU-X-Lab"
+                        target="_blank"
+                    >
+                        {svgGithub}Github
+                    </a>
+                    <a
+                        className="app-head-icon"
+                        href="https://www.yuque.com/vzbnx0"
+                        target="_blank"
+                    >
+                        {svgDoc}语雀空间
+                    </a>
+                </div>
             </div>
             {showPanel && (
                 <Fragment>
@@ -32,15 +41,26 @@ function App() {
                     ></div>
                     <div className="app-panel">
                         <div className="app-panel-head">
-                            {head}
-                            <span onClick={setShowPanel.bind(this, false)}>
-                                x
-                            </span>{" "}
+                            <div className="app-panel-head-icon-group">
+                                <a href={url}>
+                                    <div className="app-panel-head-icon">
+                                        {svgLink}
+                                    </div>
+                                </a>
+
+                                <div
+                                    className="app-panel-head-icon"
+                                    onClick={setShowPanel.bind(this, false)}
+                                >
+                                    {svgClose}
+                                </div>
+                            </div>
+                            <span className="app-panel-head-text">{head}</span>
                         </div>
                         <iframe
                             className="app-panel-iframe"
                             src={url}
-                            frameborder="0"
+                            frameBorder="0"
                         ></iframe>
                     </div>
                 </Fragment>
