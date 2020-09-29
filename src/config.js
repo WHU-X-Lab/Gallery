@@ -22,8 +22,15 @@ export const APP_CONFIG = [
     {
         name: "边捆绑",
         repo: "https://github.com/WHU-X-Lab/edge-bundling",
-        url: "",
+        url: "https://whu-x-lab.github.io/edge-bundling/",
         image:
             "https://tva1.sinaimg.cn/large/007S8ZIlgy1gj7buga03qj31qc0u0tqh.jpg",
+    },
+    {
+        name: "船舶流可视化",
+        repo: "https://github.com/WHU-X-Lab/routes-vis",
+        url: "https://whu-x-lab.github.io/routes-vis/",
+        image:
+            "https://tva1.sinaimg.cn/large/007S8ZIlgy1gj7e1iie4qj31mc0si44v.jpg",
     },
 ]
