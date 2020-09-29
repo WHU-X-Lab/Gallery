@@ -19,4 +19,11 @@ export const APP_CONFIG = [
         image:
             "https://tva1.sinaimg.cn/large/007S8ZIlgy1gj6c0t107ij31qc0u0dq6.jpg",
     },
+    {
+        name: "边捆绑",
+        repo: "https://github.com/WHU-X-Lab/edge-bundling",
+        url: "",
+        image:
+            "https://tva1.sinaimg.cn/large/007S8ZIlgy1gj7buga03qj31qc0u0tqh.jpg",
+    },
 ]
