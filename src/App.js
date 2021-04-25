@@ -1,6 +1,13 @@
 import React, { useState, Fragment } from "react"
 import { APP_CONFIG } from "./config"
-import { svgGithub, svgDoc, svgLab, svgClose, svgLink } from "./icons"
+import {
+    svgGithub,
+    svgDoc,
+    svgLab,
+    svgClose,
+    svgLink,
+    svgGithub2,
+} from "./icons"
 import "./App.less"
 
 function App() {
@@ -42,10 +49,12 @@ function App() {
                     <div className="app-panel">
                         <div className="app-panel-head">
                             <div className="app-panel-head-icon-group">
-                                <a href={url}>
-                                    <div className="app-panel-head-icon">
-                                        {svgLink}
-                                    </div>
+                                <a
+                                    href={url}
+                                    className="app-panel-head-icon"
+                                    target="_blank"
+                                >
+                                    {svgLink}
                                 </a>
 
                                 <div
@@ -81,7 +90,9 @@ function App() {
                             />
                             <div className="app-content-item-footer">
                                 {app.name}
-                                <a href={app.repo}>{svgGithub}</a>
+                                <a href={app.repo} target="_blank">
+                                    {svgGithub2}
+                                </a>
                             </div>
                         </div>
                     )
